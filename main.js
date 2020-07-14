@@ -27,7 +27,66 @@ class Traveler {
 
     }
     
+}
+
+class Doctor extends Traveler{
+    constructor(name, isHealthy){
+        super(name,isHealthy)
     }
+    heal(traveler){
+        if(traveler.isHealthy === false){
+        traveler.isHealthy = true
+        }
+    }
+
+}
+
+
+class Hunter extends Traveler {
+    constructor (name, food, isHealthy){
+        super(food,isHealthy)
+        this.food = 2
+        
+    }
+    hunt() {
+        this.food  +=5
+    }
+
+    eat(){
+
+        
+        if(this.food < 2){
+        this.food = 0
+        this.isHealthy = false
+    }else{
+        this.food -=2
+    }
+    
+}
+
+
+  
+
+
+
+giveFood(traveler, numOfFoodUnits){
+    if(this.food > 2) {
+        traveler.food += numOfFoodUnits 
+        this.food -= numOfFoodUnits
+    }
+
+}
+
+}//closing hunter class curlies
+    
+console.log(Hunter)
+    
+
+    
+        
+    
+
+
 
 
 
@@ -42,6 +101,7 @@ class Wagon {
      
         return this.capacity - this.passengers.length
         
+
             }
         
         
@@ -82,5 +142,4 @@ class Wagon {
 }
 
 }
-
 
