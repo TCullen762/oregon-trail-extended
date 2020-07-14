@@ -142,4 +142,63 @@ class Wagon {
 }
 
 }
+/* TODO: 
+Buttons
+    - add new traveler
+    - add new wagon
+        Nested in display boxes
+            - eat
+            - hunt
+             dr class 
+              - heal
+              hunter class
+              - hunt
+Display boxes
+- traveler
+  - food
+  - health
+  - name - need input box and relevent function
+  - wagon
 
+/*let newDiv = document.createElement('div')
+newDiv.append('hello')
+let sectionElement = document.querySelector('section')
+sectionElement.append(newDiv)
+
+  let displayFlips = document.createElement('div')
+     displayFlips.append(coin.toString())
+        document.body.append(displayFlips)*/
+
+
+let  addWagonDiv = document.createElement('div')
+addWagonDiv.append('add new wagon')
+document.body.append(addWagonDiv)
+
+let addNewWagonButton = document.createElement('button')
+addNewWagonButton.append('Add Wagon')
+document.body.append(addNewWagonButton)
+addNewWagonButton.addEventListener("click", function(){
+    
+    let wagonA = new Wagon('wagon')
+    document.body.append(wagonA)
+
+
+})
+
+let  addTravelerDiv = document.createElement('div')
+addTravelerDiv.append('add new traveler')
+document.body.append(addTravelerDiv)
+
+let addNewTravelerButton = document.createElement('button')
+addNewTravelerButton.append('Add passenger')
+document.body.append(addNewTravelerButton)
+addNewTravelerButton.addEventListener("click", function(){
+    
+    let passenger = new Traveler(name)
+    JSON.stringify(passenger)
+    document.body.append(passenger)
+    
+
+})
+
+//figure out the stringify method
